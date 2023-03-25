@@ -6,6 +6,16 @@ const express = require('express');
 
 const app = express();
 
+app.get('/', (req, res, next) => {
+    res.status(200).json({
+        success: true,
+        data: {
+            message: "Hello from endpoint0"
+        }
+
+    })
+})
+
 app.get('/endpoint-1', (req, res, next) => {
     res.status(200).json({
         success: true,
